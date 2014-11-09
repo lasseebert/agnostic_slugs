@@ -52,5 +52,14 @@ module AgnosticSlugs
         expect(slug.counter).to eq(1)
       end
     end
+
+    describe '.step' do
+      it 'returns the slug that was yielded true' do
+        result = Slug.step('Foo Bar') do |slug|
+          slug =~ /-7$/
+        end
+        expect(result).to eq('foo-bar-7')
+      end
+    end
   end
 end

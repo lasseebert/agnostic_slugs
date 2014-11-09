@@ -1,3 +1,7 @@
+# 0.1.0
+
+* Can step through slugs with #step and .step
+
 # 0.0.3
 
 * Handle Danish chars better

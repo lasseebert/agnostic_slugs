@@ -2,6 +2,10 @@ module AgnosticSlugs
   class Slug
     attr_reader :original, :counter
 
+    def self.step(name, &block)
+      new(name).step(&block)
+    end
+
     def initialize(original, counter = 1)
       @original = original
       @counter  = counter
@@ -9,6 +13,15 @@ module AgnosticSlugs
 
     def next
       self.class.new(original, counter + 1)
+    end
+
+    def step
+      instance = self
+      loop do
+        break if yield(instance.to_s)
+        instance = instance.next
+      end
+      instance.to_s
     end
 
     def to_s
