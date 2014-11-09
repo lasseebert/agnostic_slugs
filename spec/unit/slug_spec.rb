@@ -13,7 +13,7 @@ module AgnosticSlugs
       end
 
       describe 'accented input' do
-        let(:input) { 'Hellø Wårld' }
+        let(:input) { 'Hellő Wárld' }
         it { should eq('hello-warld') }
       end
 
@@ -31,6 +31,11 @@ module AgnosticSlugs
       describe 'with leading and trailing spaces' do
         let(:input) { '  Hello  world  ' }
         it { should eq('hello-world') }
+      end
+
+      describe 'Danish chars' do
+        let(:input) { 'Rør på næse' }
+        it { should eq('roer-paa-naese') }
       end
     end
 
