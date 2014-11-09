@@ -1,4 +1,4 @@
-# Next
+# 0.0.2
 
 * Can handle leading and trailing dashes
 
