@@ -17,9 +17,9 @@ gem 'agnostic_slugs'
 
 ## Usage
 
-    slug = AgnosticSlug::Slug.new('Look at my pretty new shoes! :)')
+    slug = AgnosticSlugs::Slug.new('Look at my pretty new shoes! :)')
     slug.to_s       # => "look-at-my-pretty-new-shoes"
-    slug.next.to_s  # => "look-at-my-pretty-new-shows-2"
+    slug.next.to_s  # => "look-at-my-pretty-new-shoes-2"
 
 ## Contributing
 
