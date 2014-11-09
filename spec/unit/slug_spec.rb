@@ -27,6 +27,11 @@ module AgnosticSlugs
         let(:counter) { 2 }
         it { should eq('hello-world-2') }
       end
+
+      describe 'with leading and trailing spaces' do
+        let(:input) { '  Hello  world  ' }
+        it { should eq('hello-world') }
+      end
     end
 
     describe '#next' do

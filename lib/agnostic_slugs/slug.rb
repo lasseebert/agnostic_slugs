@@ -24,6 +24,9 @@ module AgnosticSlugs
       result = result.downcase
       result = result.gsub(/[^a-z0-9\-]/, '')
 
+      # Remove leading and trailing dash
+      result = result.sub(/^-/, '').sub(/-$/, '')
+
       if counter > 1
         "#{result}-#{counter}"
       else
