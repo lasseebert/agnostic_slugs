@@ -2,10 +2,13 @@
 
 agnostic_slugs is a simple slug generator that is agnostic.
 
-* It does not care about ORMs.
-* It will not monkey patch
+What it can:
+* Generate slugs
 
-It can create slugs. Period.
+What it can not:
+* Integrate with ActiveRecord, Mongoid or any other ORM
+* Integrate with Rails or any other framework
+* Monkey-patch the `String` class
 
 ## Installation
 
