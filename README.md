@@ -26,7 +26,7 @@ slug.next.to_s  # => "look-at-my-pretty-new-shoes-2"
 Or step through slugs to find a unique slug using your own business logic:
 
 ```ruby
-Slug.step('Hello world') do |slug|
+AgnosticSlugs::Slug.step('Hello world') do |slug|
   my_repo.slug_unique?(slug)
 end
 # => "hello-world-7"
