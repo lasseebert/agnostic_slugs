@@ -10,6 +10,10 @@ What it can not:
 * Integrate with Rails or any other framework
 * Monkey-patch the `String` class
 
+## Status
+
+[![Build Status](https://semaphoreapp.com/api/v1/projects/29d6a477-42c2-450a-b261-937cc7497806/298877/badge.png)](https://semaphoreapp.com/lasseebert/agnostic_slugs)
+
 ## Installation
 
 Add this line to your application's Gemfile:
