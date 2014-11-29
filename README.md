@@ -39,7 +39,6 @@ end
 # => "hello-world-7"
 ```
 
-
 ## Contributing
 
 1. Fork it ( https://github.com/lasseebert/agnostic_slugs/fork )
