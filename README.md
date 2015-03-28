@@ -24,16 +24,32 @@ gem 'agnostic_slugs'
 
 ## Usage
 
+It makes a slug suitable for URLs:
+
 ```ruby
-slug = AgnosticSlugs::Slug.new('Look at my pretty new shoes! :)')
-slug.to_s       # => "look-at-my-pretty-new-shoes"
-slug.next.to_s  # => "look-at-my-pretty-new-shoes-2"
+slug = AgnosticSlugs::Slug.new("Look at my pretty new shoes! :)")
+slug.to_s # => "look-at-my-pretty-new-shoes"
 ```
 
-Or step through slugs to find a unique slug using your own business logic:
+It expands foreign chars. Example in Danish:
 
 ```ruby
-AgnosticSlugs::Slug.step('Hello world') do |slug|
+slug = AgnosticSlugs::Slug.new("Ræven spiser rønnebær")
+slug.to_s # => "raeven-spiser-roennebaer"
+```
+
+Find `#next` slug:
+
+```ruby
+slug = AgnosticSlugs::Slug.new("Hello")
+slug.to_s       # => "hello"
+slug.next.to_s  # => "hello-2"
+```
+
+Or `.step` through slugs to find a unique slug using your own business logic:
+
+```ruby
+AgnosticSlugs::Slug.step("Hello world") do |slug|
   my_repo.slug_unique?(slug)
 end
 # => "hello-world-7"
