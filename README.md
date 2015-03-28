@@ -12,7 +12,7 @@ What it can not:
 
 ## Status
 
-[![Build Status](http://ci.lasseebert.dk/lasseebert/agnostic_slugs/badge)](http://ci.lasseebert.dk/lasseebert/agnostic_slugs)
+[![Build Status](https://semaphoreci.com/api/v1/projects/0be3abb2-794f-4513-a121-220b1278f853/313941/badge.svg)](https://semaphoreci.com/lasseebert/agnostic_slugs)
 
 ## Installation
 
